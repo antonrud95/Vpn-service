@@ -1,33 +1,40 @@
 @import 'src/styles/variables';
 @import 'src/styles/mixins';
+
 .navbar {
   background-color: transparent;
-  padding: 1.5rem 0;
+  padding: 20px 0;
   transition: all 0.1s ease-in-out;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  @include breakpoint('mobile') {
+    padding: 45px 0;
+  }
 }
 .nav {
   display: none;
   @include breakpoint('tablet') {
     display: flex;
+    align-items: center;
   }
 }
 .nav-link {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  color: $primary;
-  margin: 0 1.5rem;
-  padding: 0.25rem 0;
-  border-bottom: 2px solid transparent;
+  margin: 0 20px;
   transition: all 0.3s ease-in-out;
-  &:hover {
-    border-bottom: 2px solid $primary;
-    color: $primary;
-  }
 }
 .open-icon {
   display: block;
   @include breakpoint('tablet') {
     display: none;
   }
+}
+
+.hero-btn {
+  border-color: $border;
+  color: $border;
+  border-radius: 50px;
+}
+
+.nav-link-medium {
+  font-family: 'Rubik Medium', sans-serif;
+  color: $secondary;
+  margin-right: 30px;
 }

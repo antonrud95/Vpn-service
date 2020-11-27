@@ -30,19 +30,32 @@ const SNavbar = () => {
           onClick={openClickHandler}
         />
 
-        <Nav className={classnames(styles.nav, 'mr-4', 'ml-auto')}>
+        <Nav className={styles.nav}>
           <Link to="/" className={styles.navLink}>
-            Nav Item #1
+            About
           </Link>
           <Link to="/" className={styles.navLink}>
-            Nav Item #2
+            Features
           </Link>
           <Link to="/" className={styles.navLink}>
-            Nav Item #3
+            Pricing
+          </Link>
+          <Link to="/" className={styles.navLink}>
+            Testimonials
+          </Link>
+          <Link to="/" className={styles.navLink}>
+            Help
           </Link>
         </Nav>
         <Nav className={styles.nav}>
-          <Button variant={'primary'}>Button</Button>
+          <Link to="/" className={styles.navLinkMedium}>
+            Sign in
+          </Link>
+          <Link to="/">
+            <Button variant={'secondary'} className={styles.heroBtn}>
+              Sign up
+            </Button>
+          </Link>
         </Nav>
       </Container>
       <MobileMenu isShown={isMenuShown} toggle={toggleMenu} />

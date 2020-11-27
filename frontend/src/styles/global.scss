@@ -16,8 +16,8 @@ a {
   color: $primary !important;
   text-decoration: inherit !important;
   font-family: 'Rubik Regular', sans-serif;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 16px !important;
+  line-height: 19px !important;
   &:hover,
   &:focus,
   &:active {

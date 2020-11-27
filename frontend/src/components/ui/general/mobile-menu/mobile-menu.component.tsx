@@ -29,17 +29,28 @@ const MobileMenu: FC<Props> = ({ isShown, toggle }) => {
       </Container>
       <Container className={styles.linkBlock}>
         <Link to="/" className={styles.link}>
-          Nav Item #1
+          About
         </Link>
         <Link to="/" className={styles.link}>
-          Nav Item #2
+          Features
         </Link>
         <Link to="/" className={styles.link}>
-          Nav Item #3
+          Pricing
         </Link>
-        <Button variant={'primary'} additionalClasses={[styles.buttonRoot]}>
-          Button
-        </Button>
+        <Link to="/" className={styles.link}>
+          Testimonials
+        </Link>
+        <Link to="/" className={styles.link}>
+          Help
+        </Link>
+        <Link to="/" className={styles.navLinkMedium}>
+          Sign in
+        </Link>
+        <Link to="/">
+          <Button variant={'secondary'} className={styles.heroBtn}>
+            Sign up
+          </Button>
+        </Link>
       </Container>
     </div>
   )
