@@ -3,7 +3,6 @@ require('dotenv').config()
 const path = require('path')
 const {
   GATSBY_ACTIVE_ENV,
-  GATSBY_CMS_URL,
   GATSBY_SITE_URL,
   GATSBY_TITLE,
   GATSBY_DESCRIPTION,
@@ -51,13 +50,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-strapi',
+      resolve: `gatsby-source-datocms`,
       options: {
-        apiURL: GATSBY_CMS_URL,
-        contentTypes: [
-          // Insert list of resources
-        ],
-        queryLimit: 1000,
+        apiToken: process.env.READONLY_API_TOKEN,
+        preview: false,
+        disableLiveReload: false,
       },
     },
     'gatsby-transformer-sharp',
