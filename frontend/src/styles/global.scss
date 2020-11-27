@@ -13,13 +13,42 @@ li {
 
 a {
   display: block;
-  color: inherit;
+  color: $primary !important;
   text-decoration: inherit !important;
+  font-family: 'Rubik Regular', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
   &:hover,
   &:focus,
   &:active {
     color: inherit;
   }
+}
+
+h1 {
+  font-family: 'Rubik Medium', sans-serif;
+  font-size: 50px;
+  line-height: 70px;
+  color: $secondary;
+}
+h2 {
+  font-family: 'Rubik Medium', sans-serif;
+  font-size: 35px;
+  line-height: 50px;
+  color: $secondary;
+}
+h5 {
+  font-family: 'Rubik Regular', sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  color: $primary;
+}
+
+p {
+  font-family: 'Rubik Regular', sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  color: $primary;
 }
 
 @media (max-width: 1200px) {
