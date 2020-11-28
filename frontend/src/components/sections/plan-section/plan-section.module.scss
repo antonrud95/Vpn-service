@@ -29,13 +29,16 @@
 }
 
 .price-styles {
-    margin-top: 115px;
+    margin-top: 50px;
     font-family: 'Rubik Regular';
     font-size: 25px;
     line-height: 30px;
     text-align: center;
     color: $primary;
     margin-bottom: 20px;
+    @include breakpoint('mobile') {
+        margin-top: 115px;
+    }
 }
 .price-medium-styles {
     margin-top: 115px;

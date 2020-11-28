@@ -22,20 +22,30 @@
 .border-component {
     border: 2px solid #DDDDDD;
     border-radius: 10px;
-    padding: 80px 0 50px 0;
-    min-height: 760px;
-    width: 30%;
+    padding: 40px 0 25px 0;
+    min-height: 700px;
+    width: 100%;
     position: relative !important;
     transition: .3s ease-in;
+    @include breakpoint('mobile') {
+        padding: 80px 0 50px 0;
+        min-height: 760px;
+        width: 30%;
+    }
 }
 .border-component-red {
     border: 2px solid $border;
     border-radius: 10px;
-    padding: 80px 0 50px 0;
-    min-height: 760px;
-    width: 30%;
+    padding: 40px 0 25px 0;
+    min-height: 700px;
+    width: 100%;
     position: relative !important;
     transition: .3s ease-in;
+    @include breakpoint('mobile') {
+        padding: 80px 0 50px 0;
+        min-height: 760px;
+        width: 30%;
+    }
 }
 
 .plan-btn {

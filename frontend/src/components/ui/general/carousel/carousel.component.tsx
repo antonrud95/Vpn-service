@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { ReactNodeArray } from 'react'
+import FC from '~/types/fc'
 
 import Slider from 'react-slick'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-const Carousel = ({ children, slides }) => {
+interface Props {
+  children: ReactNodeArray
+  slides: any
+}
+
+const Carousel: FC<Props> = ({ children, slides }) => {
   const settings = {
     dots: true,
     infinite: true,
