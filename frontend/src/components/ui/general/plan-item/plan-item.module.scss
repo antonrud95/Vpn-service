@@ -24,18 +24,18 @@
     border-radius: 10px;
     padding: 80px 0 50px 0;
     min-height: 760px;
-    min-width: 330px;
+    width: 30%;
     position: relative !important;
+    transition: .3s ease-in;
 }
-
-.price-styles {
-    margin-top: 115px;
-    font-family: 'Rubik Medium';
-    font-size: 25px;
-    line-height: 30px;
-    text-align: center;
-    color: $secondary;
-    margin-bottom: 20px;
+.border-component-red {
+    border: 2px solid $border;
+    border-radius: 10px;
+    padding: 80px 0 50px 0;
+    min-height: 760px;
+    width: 30%;
+    position: relative !important;
+    transition: .3s ease-in;
 }
 
 .plan-btn {
@@ -46,10 +46,36 @@
     color: $border;
     width: 100%;
     max-width: 178px;
+    transition: .3s ease-in;
+}
+.plan-btn-red {
+    margin: 0 auto;
+    border-color: $border;
+    min-height: 45px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: $border;
+    width: 100%;
+    max-width: 178px;
+    transition: .3s ease-in;
+    position: relative;
+    &:after {
+        content: '';
+        width: 128px;
+        height: 45px;
+        position: absolute;
+        top: 50%;
+        background: rgba(245, 56, 56, 0.35);
+        filter: blur(54px);
+        border-radius: 60px;
+      }
 }
 
 .features-container {
-    padding: 0 69px;
+    padding: 0 10px;
+    @include breakpoint('desktop') {
+        padding: 0 69px;
+    }
 }
 
 .button-wrapper {

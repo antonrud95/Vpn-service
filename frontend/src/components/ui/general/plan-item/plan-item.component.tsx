@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Img, { FluidObject } from 'gatsby-image'
 import SButton from '~/components/ui/general/button/button.component'
 
@@ -18,7 +18,7 @@ interface Props {
   sixthFeature?: string
   fifth?: string
   sixth?: string
-  price: string
+  price: any
 }
 
 const PlanItem: FC<Props> = ({
@@ -35,8 +35,17 @@ const PlanItem: FC<Props> = ({
   sixth,
   price,
 }) => {
+  const [hover, setHover] = useState(false)
+  const toggleHover = () => {
+    setHover(!hover)
+  }
+
   return (
-    <div className={styles.borderComponent}>
+    <div
+      className={!hover ? styles.borderComponent : styles.borderComponentRed}
+      onMouseEnter={toggleHover}
+      onMouseLeave={toggleHover}
+    >
       <Img fluid={image} className={styles.imageStyles} />
       <h4>{plan}</h4>
       <div className={styles.featuresContainer}>
@@ -66,8 +75,11 @@ const PlanItem: FC<Props> = ({
         </div>
       </div>
       <div className={styles.buttonWrapper}>
-        <p className={styles.priceStyles}>{price}</p>
-        <SButton variant="secondary" className={styles.planBtn}>
+        {price}
+        <SButton
+          variant="secondary"
+          className={!hover ? styles.planBtn : styles.planBtnRed}
+        >
           Select
         </SButton>
       </div>

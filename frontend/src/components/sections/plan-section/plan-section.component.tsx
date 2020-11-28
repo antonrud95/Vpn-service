@@ -5,6 +5,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 import PlanItem from '~/components/ui/general/plan-item/plan-item.component'
 import CheckItem from '~/assets/icons/simple-check.svg'
 
+import { useWindowDimensions } from '~/helpers/useWindowDimensions.helper'
+
 import styles from './plan-section.module.scss'
 
 const PlanSection = () => {
@@ -52,7 +54,11 @@ const PlanSection = () => {
             fourthFeature={'Works on All Devices'}
             fifth={styles.dNone}
             sixth={styles.dNone}
-            price={'Free'}
+            price={
+              <p className={styles.priceStyles}>
+                <span className={styles.priceMediumStyles}>Free</span>
+              </p>
+            }
           />
           <PlanItem
             image={data.standard.childImageSharp.fluid}
@@ -65,7 +71,11 @@ const PlanSection = () => {
             fifthFeature={'Connect Anyware'}
             fifth={styles.featureWrapper}
             sixth={styles.dNone}
-            price={'$9 / mo'}
+            price={
+              <p className={styles.priceStyles}>
+                <span className={styles.priceMediumStyles}>9$ </span>/ mo
+              </p>
+            }
           />
           <PlanItem
             image={data.premium.childImageSharp.fluid}
@@ -79,7 +89,11 @@ const PlanSection = () => {
             sixthFeature={'Get New Features'}
             fifth={styles.featureWrapper}
             sixth={styles.featureWrapper}
-            price={'$12 / mo'}
+            price={
+              <p className={styles.priceStyles}>
+                <span className={styles.priceMediumStyles}>12$ </span>/ mo
+              </p>
+            }
           />
         </div>
       </Container>
