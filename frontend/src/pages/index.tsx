@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
     <FeaturesSection features={data.datoCmsFeature} />
     <PlanSection />
     <NetworkSection />
-    <ReviewsSection />
+    <ReviewsSection reviews={data.allDatoCmsReview.nodes} />
   </Layout>
 )
 
@@ -40,6 +40,25 @@ export const query = graphql`
         fluid {
           ...GatsbyDatoCmsFluid
         }
+      }
+    }
+    allDatoCmsReview {
+      nodes {
+        image {
+          fluid {
+            ...GatsbyDatoCmsFluid
+          }
+        }
+        name
+        review
+        stars
+        star {
+          fluid {
+            ...GatsbyDatoCmsFluid
+          }
+        }
+        id
+        city
       }
     }
   }

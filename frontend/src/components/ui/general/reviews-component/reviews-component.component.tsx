@@ -1,21 +1,21 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import styles from './reviews-section.module.scss'
+import styles from './reviews-component.module.scss'
 
 const ReviewsComponent = ({ image, title, city, rate, stars, review }) => {
   return (
-    <div>
+    <div className={styles.reviewsWrapper}>
       <div className={styles.reviewsHeader}>
-        <div>
-          <Img fluid={image} />
+        <div className={styles.reviewsUser}>
+          <Img fluid={image} className={styles.iconImage} />
           <div>
-            <h4>{title}</h4>
-            <p>{city}</p>
+            <h4 className={styles.reviewName}>{title}</h4>
+            <p className={styles.reviewCity}>{city}</p>
           </div>
         </div>
         <div className={styles.rate}>
-          <p>{rate}</p>
-          <Img fluid={stars} />
+          <p className={styles.rateText}>{rate}</p>
+          <Img fluid={stars} className={styles.starImage} />
         </div>
       </div>
       <p>{review}</p>

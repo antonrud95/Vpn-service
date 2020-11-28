@@ -1,0 +1,56 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.reviews-wrapper {
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+    padding: 30px;
+    min-height: 230px;
+    position: relative;
+    &:after {
+        content: '';
+    }
+}
+
+.icon-image {
+    width: 50px !important;
+    height: 50px !important;
+    margin-right: 20px;
+}
+
+.star-image {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.reviews-user {
+    display: flex;
+    align-items: center;
+}
+
+.review-name {
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+
+.review-city {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 0;
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+}
+
+.rate-text {
+    margin: 0 10px 0 0;
+}
