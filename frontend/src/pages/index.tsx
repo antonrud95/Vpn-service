@@ -7,6 +7,7 @@ import HeroSection from '~/components/sections/hero-section/hero-section.compone
 import AdvantagesSection from '~/components/sections/advantages-section/advantages-section.component'
 import FeaturesSection from '~/components/sections/features-section/features-section.component'
 import PlanSection from '~/components/sections/plan-section/plan-section.component'
+import NetworkSection from '~/components/sections/network-section/network-section.component'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = ({ data }) => (
     <AdvantagesSection />
     <FeaturesSection features={data.datoCmsFeature} />
     <PlanSection />
+    <NetworkSection />
   </Layout>
 )
 
