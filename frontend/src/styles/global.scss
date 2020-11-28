@@ -81,3 +81,16 @@ p {
     margin-bottom: 50px;
   }
 }
+
+.slick-dots {
+  bottom: -82px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 20px !important;
+  color: #DDE0E4 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $border !important;
+}

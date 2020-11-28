@@ -5,12 +5,36 @@
     border: 2px solid #DDDDDD;
     border-radius: 10px;
     padding: 30px;
-    min-height: 230px;
+    min-height: 384px;
     position: relative;
-    &:after {
-        content: '';
+    background-color: #fff;
+    @include breakpoint('mobile') {
+        min-height: 260px;
     }
+    @include breakpoint('tablet') {
+       max-width: 400px !important;
+    }
+    @include breakpoint('desktop') {
+        min-height: 230px;
+        max-width: 400px !important;
+    }
+    // &:after {
+    //     content: '';
+    //     position: absolute !important;
+    //     width: 80%;
+    //     height: 300px;
+    //     top: 100%;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     background: #0D1025;
+    //     // opacity: 0.06;
+    //     filter: blur(114px) !important;
+    //     // border-radius: 10px;
+    //     z-index: 1000 !important;
+    // }
 }
+
+
 
 .icon-image {
     width: 50px !important;
@@ -53,4 +77,9 @@
 
 .rate-text {
     margin: 0 10px 0 0;
+}
+
+.reviews-styles {
+    margin-bottom: 0;
+    line-height: 25px;
 }

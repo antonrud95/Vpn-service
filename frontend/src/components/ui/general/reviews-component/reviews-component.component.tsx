@@ -18,7 +18,7 @@ const ReviewsComponent = ({ image, title, city, rate, stars, review }) => {
           <Img fluid={stars} className={styles.starImage} />
         </div>
       </div>
-      <p>{review}</p>
+      <p className={styles.reviewsStyles}>{review}</p>
     </div>
   )
 }
