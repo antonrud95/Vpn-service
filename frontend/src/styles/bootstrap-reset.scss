@@ -6,6 +6,10 @@
   @media (min-width: 1200px) {
     max-width: 1200px;
   }
+  @media (min-width: 768px) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 }
 .dropdown-toggle {
   &:after {
