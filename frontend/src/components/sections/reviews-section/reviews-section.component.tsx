@@ -25,43 +25,22 @@ const ReviewsSection: FC<Props> = ({ reviews }) => {
           These are the stories of our customers who have joined us with great
           pleasure when using this crazy feature.
         </p>
-        {width < 992 && (
-          <Carousel slides={width > 991 ? 3 : 1}>
-            {reviews.map((review: ReviewType, index) => {
-              return (
-                <ReviewsComponent
-                  key={review.id}
-                  image={review.image.fluid}
-                  title={review.name}
-                  city={review.city}
-                  stars={review.star.fluid}
-                  rate={review.stars}
-                  review={review.review}
-                />
-              )
-            })}
-          </Carousel>
-        )}
+        <Carousel slides={width > 991 ? 3 : 1}>
+          {reviews.map((review: ReviewType, index) => {
+            return (
+              <ReviewsComponent
+                key={review.id}
+                image={review.image.fluid}
+                title={review.name}
+                city={review.city}
+                stars={review.star.fluid}
+                rate={review.stars}
+                review={review.review}
+              />
+            )
+          })}
+        </Carousel>
       </Container>
-      {width > 991 && (
-        <div className={styles.maximumCarousel}>
-          <Carousel slides={width > 991 ? 3 : 1}>
-            {reviews.map((review: ReviewType, index) => {
-              return (
-                <ReviewsComponent
-                  key={review.id}
-                  image={review.image.fluid}
-                  title={review.name}
-                  city={review.city}
-                  stars={review.star.fluid}
-                  rate={review.stars}
-                  review={review.review}
-                />
-              )
-            })}
-          </Carousel>
-        </div>
-      )}
     </Container>
   )
 }

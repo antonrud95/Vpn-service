@@ -15,8 +15,7 @@
        max-width: 400px !important;
     }
     @include breakpoint('desktop') {
-        min-height: 230px;
-        max-width: 400px !important;
+        max-width: 370px !important;
     }
     // &:after {
     //     content: '';
