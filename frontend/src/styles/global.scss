@@ -40,9 +40,14 @@ h1 {
 }
 h2 {
   font-family: 'Rubik Medium', sans-serif;
-  font-size: 35px;
-  line-height: 50px;
+  font-size: 30px;
+  line-height: 45px;
   color: $secondary;
+  margin-bottom: 20px;
+  @include breakpoint('mobile') {
+    font-size: 35px;
+    line-height: 50px;
+  }
 }
 h3 {
   font-family: 'Rubik Bold', sans-serif;
