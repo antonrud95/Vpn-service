@@ -1,0 +1,27 @@
+
+.fluid-container {
+    background: linear-gradient(180deg, #F8F8F8 -45.04%, rgba(248, 248, 248, 0) 88.56%);
+    padding-top: 80px !important;
+}
+
+.main-plan-title {
+    text-align: center;
+}
+.main-plan-text {
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.item-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
