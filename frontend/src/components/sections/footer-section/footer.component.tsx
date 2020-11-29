@@ -71,57 +71,59 @@ const FooterSection = () => {
               </p>
             </div>
           </Col>
-          <Col xs="6" sm="4" md="2">
-            <p className={styles.footerLinksTitle}>Product</p>
-            <Link to="/" className={styles.footerLinksItem}>
-              Download
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              Pricing
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              Locations
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              Server
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              Countries
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              Blog
-            </Link>
-          </Col>
-          <Col xs="6" sm="4" md="2">
-            <p className={styles.footerLinksTitle}>Engage</p>
-            <Link to="/" className={styles.footerLinksItem}>
-              LaslesVPN ?
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              FAQ
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              Tutorials
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              About Us
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              Privacy Policy
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              Terms of Service
-            </Link>
-          </Col>
-          <Col xs="6" sm="4" md="3">
-            <p className={styles.footerLinksTitle}>Earn money</p>
-            <Link to="/" className={styles.footerLinksItem}>
-              Affiliate
-            </Link>
-            <Link to="/" className={styles.footerLinksItem}>
-              Become Partner
-            </Link>
-          </Col>
+          <div className={styles.footerGrid}>
+            <div className={styles.footerGridItem}>
+              <p className={styles.footerLinksTitle}>Product</p>
+              <Link to="/" className={styles.footerLinksItem}>
+                Download
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                Pricing
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                Locations
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                Server
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                Countries
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                Blog
+              </Link>
+            </div>
+            <div className={styles.footerGridItem}>
+              <p className={styles.footerLinksTitle}>Engage</p>
+              <Link to="/" className={styles.footerLinksItem}>
+                LaslesVPN ?
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                FAQ
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                Tutorials
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                About Us
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                Privacy Policy
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                Terms of Service
+              </Link>
+            </div>
+            <div className={styles.footerGridItem}>
+              <p className={styles.footerLinksTitle}>Earn money</p>
+              <Link to="/" className={styles.footerLinksItem}>
+                Affiliate
+              </Link>
+              <Link to="/" className={styles.footerLinksItem}>
+                Become Partner
+              </Link>
+            </div>
+          </div>
         </Row>
       </Container>
     </Container>

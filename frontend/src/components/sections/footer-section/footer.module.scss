@@ -133,3 +133,19 @@
     margin-bottom: 10px;
 }
 
+.footer-grid {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include breakpoint('tablet') {
+        margin-left: 150px;
+    }
+}
+
+.footer-grid-item {
+    width: 160px;
+    @include breakpoint('mobile') {
+        max-width: 125px !important;
+    }
+}
