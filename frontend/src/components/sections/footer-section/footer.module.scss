@@ -7,22 +7,14 @@
 
 .footer-container {
     position: relative;
-}
-
-.footer-hat {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
     top: -116px;
+    background-color: #fff !important;
+    padding: 29px 35px !important;
     border-radius: 10px;
-    padding: 29px 35px;
-    background-color: white !important;
-    z-index: 1000 !important;
     @include breakpoint('mobile') {
+        padding: 58px 70px !important;
         display: flex;
         justify-content: space-between;
-        max-height: 233px;
-        padding: 58px 70px;
     }
     &:after {
         content: '';
@@ -33,9 +25,10 @@
         left: 50%;
         transform: translateX(-50%);
         background: #0D1025 !important;
-        opacity: 0.4 !important;
+        opacity: 0.06 !important;
         filter: blur(114px) !important;
         border-radius: 10px;
+        z-index: -1;
     }
 }
 .footer-hat-content {
@@ -69,10 +62,13 @@
 
 .footer-btn {
     min-height: 60px;
-    min-width: 250px;
+    width: 100%;
     background-color: $border;
     color: #fff;
     position: relative;
+    @include breakpoint('tablet') {
+        min-width: 250px !important;
+    }
     &:after {
         content: '';
         width: 211px;
