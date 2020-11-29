@@ -9,6 +9,7 @@ import FeaturesSection from '~/components/sections/features-section/features-sec
 import PlanSection from '~/components/sections/plan-section/plan-section.component'
 import NetworkSection from '~/components/sections/network-section/network-section.component'
 import ReviewsSection from '~/components/sections/reviews-section/reviews-section.component'
+import FooterSection from '~/components/sections/footer-section/footer.component'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -19,6 +20,7 @@ const IndexPage = ({ data }) => (
     <PlanSection />
     <NetworkSection />
     <ReviewsSection reviews={data.allDatoCmsReview.nodes} />
+    <FooterSection />
   </Layout>
 )
 
