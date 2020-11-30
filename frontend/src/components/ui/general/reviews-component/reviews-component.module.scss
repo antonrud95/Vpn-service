@@ -17,20 +17,20 @@
     @include breakpoint('desktop') {
         margin-right: 5%;
     }
-    // &:after {
-    //     content: '';
-    //     position: absolute !important;
-    //     width: 80%;
-    //     height: 300px;
-    //     top: 100%;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    //     background: #0D1025;
-    //     // opacity: 0.06;
-    //     filter: blur(114px) !important;
-    //     // border-radius: 10px;
-    //     z-index: 1000 !important;
-    // }
+    &:after {
+        content: '';
+        position: absolute !important;
+        width: 80%;
+        height: 300px;
+        top: 0 !important;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #0D1025;
+        opacity: 0.06;
+        filter: blur(114px) !important;
+        border-radius: 10px;
+        z-index: 1000 !important;
+    }
 }
 
 

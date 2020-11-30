@@ -94,3 +94,52 @@ p {
 .slick-dots li.slick-active button:before {
   color: $border !important;
 }
+
+.slick-prev,
+.slick-next {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  z-index: 1000 !important;
+  border: 2px solid $border !important;
+  &:hover,
+  &:focus {
+    background-color: $border !important;
+  }
+}
+
+.slick-prev {
+  top: 125% !important;
+  left: initial !important;
+  right: 50px !important;
+  &:before {
+    content: '\1F860' !important;
+    color: $border !important;
+    z-index: 1000 !important;
+  }
+}
+
+.slick-next,
+.slick-prev {
+  &:active,
+  &:hover,
+  &:focus {
+    &:before {
+      color: #fff !important;
+    }
+  }
+}
+
+.slick-next {
+  top: 125% !important;
+  right: 0 !important;
+  &:before {
+    content: '\1F862' !important;
+    color: $border !important;
+    z-index: 1000 !important;
+    &:hover,
+    &:focus {
+      color: #fff !important;
+    }
+  }
+}
