@@ -2,18 +2,49 @@
 @import 'src/styles/mixins';
 
 .hero-block {
-  display: flex;
-  height: 95vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.pic {
-  width: 300px;
-  @include breakpoint('tablet') {
-    width: 500px;
+  padding-top: 100px;
+  @include breakpoint('mobile') {
+    padding: 180px 0 0 0 !important;
   }
 }
-.hero-title {
-  font-size: 24px;
+.pic {
+  max-width: 100%;
+  @include breakpoint('tablet') {
+    width: 611px;
+  }
+}
+
+.bold-title {
+  font-family: 'Rubik Bold';
+}
+
+.bold-text {
+  font-family: 'Rubik Medium';
+}
+
+.image-wrapper {
+  padding: 0 !important;
+}
+
+.hero-btn {
+  min-height: 60px;
+  width: 100%;
+  background-color: $border;
+  color: #fff;
+  position: relative;
+  margin-bottom: 50px;
+  @include breakpoint('mobile') {
+    max-width: 250px;
+    margin-bottom: 0;
+  }
+  &:after {
+    content: '';
+    width: 211px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    background: rgba(245, 56, 56, 0.35);
+    filter: blur(54px);
+    border-radius: 10px;
+  }
 }

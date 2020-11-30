@@ -1,31 +1,32 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import SButton from '~/components/ui/general/button/button.component'
 
 import styles from './hero-section.module.scss'
 import Img from 'gatsby-image'
 
-const HeroSection = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      unicornPic: file(relativePath: { eq: "images/global/unicorn-pic.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+const HeroSection = ({ hero }) => {
   return (
-    <Container>
-      <div className={styles.heroBlock}>
-        <Img
-          fluid={data.unicornPic.childImageSharp.fluid}
-          className={styles.pic}
-        />
-        <p className={styles.heroTitle}>Let the magic work!</p>
-      </div>
+    <Container className={styles.heroBlock}>
+      <Row>
+        <Col xs="12" md="6">
+          <h1>
+            Want anything to be easy with{' '}
+            <span className={styles.boldTitle}>LaslesVPN.</span>
+          </h1>
+          <p>
+            Provide a network for all your needs with ease and fun using{' '}
+            <span className={styles.boldText}>LaslesVPN</span> discover
+            interesting features from us.
+          </p>
+          <SButton variant="primary" className={styles.heroBtn}>
+            Get started
+          </SButton>
+        </Col>
+        <Col xs="12" md="6" className={styles.imageWrapper}>
+          <Img fluid={hero.image.fluid} className={styles.pic} />
+        </Col>
+      </Row>
     </Container>
   )
 }

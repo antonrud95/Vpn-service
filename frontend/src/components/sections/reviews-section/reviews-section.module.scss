@@ -1,0 +1,26 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.reviews-fluid-container {
+    padding-bottom: 250px;
+    position: relative;
+    overflow: hidden !important;
+}
+
+.reviews-title {
+    text-align: center;
+    margin-bottom: 20px;
+    @include breakpoint('desktop') {
+        width: 40%;
+        margin: 0 auto 20px auto;
+    }
+}
+
+.reviews-text {
+    text-align: center;
+    margin-bottom: 35px;
+    @include breakpoint('desktop') {
+        width: 45%;
+        margin: 0 auto 60px auto;
+    }
+}

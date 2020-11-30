@@ -1,0 +1,28 @@
+@import '~/styles/variables.scss';
+@import '~/styles/mixins.scss';
+
+.advantages-container {
+    margin-top: 103px;
+    background-color: #fff;
+    border-radius: 10px !important;
+    position: relative !important;
+    min-height: 200px;
+    &:after {
+        content: '';
+        position: absolute !important;
+        top: 40px !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 190px;
+        background: #0D1025;
+        opacity: 0.06;
+        z-index: -1;
+        filter: blur(114px) !important;
+    }
+    @include breakpoint('mobile') {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

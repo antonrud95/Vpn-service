@@ -1,14 +1,14 @@
 @import 'src/styles/variables';
 .button {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Rubik Medium', sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 19px;
   color: white;
   background-color: $primary;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
+  min-height: 45px;
   border: none;
   border-radius: 10px;
   transition: all 0.1s ease-in-out;
@@ -30,7 +30,7 @@
   background-color: #353057;
   &:hover,
   &:focus {
-    background-color: #353057;
+    background-color: orangered;
   }
   &:active {
     background-color: #353057 !important;

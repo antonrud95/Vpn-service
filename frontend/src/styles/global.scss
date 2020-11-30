@@ -13,8 +13,11 @@ li {
 
 a {
   display: block;
-  color: inherit;
+  color: $primary !important;
   text-decoration: inherit !important;
+  font-family: 'Rubik Regular';
+  font-size: 16px !important;
+  line-height: 19px !important;
   &:hover,
   &:focus,
   &:active {
@@ -22,14 +25,121 @@ a {
   }
 }
 
-@media (max-width: 1200px) {
+h1 {
+  font-family: 'Rubik Medium';
+  font-size: 30px;
+  line-height: 50px;
+  color: $secondary;
+  @include breakpoint('mobile') {
+    margin-bottom: 20px;
+  }
+  @include breakpoint('tablet') {
+    font-size: 50px;
+    line-height: 70px;  
+  }
+}
+h2 {
+  font-family: 'Rubik Medium', sans-serif;
+  font-size: 30px;
+  line-height: 45px;
+  color: $secondary;
+  margin-bottom: 20px;
+  @include breakpoint('mobile') {
+    font-size: 35px;
+    line-height: 50px;
+  }
+}
+h3 {
+  font-family: 'Rubik Bold', sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  color: $secondary;
+  margin-bottom: 5px;
+}
+h4 {
+  font-family: 'Rubik Medium', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: $secondary;
+  margin-bottom: 30px;
+  text-align: center;
+}
+h5 {
+  font-family: 'Rubik Regular', sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  color: $primary;
 }
 
-@media (max-width: 992px) {
+p {
+  font-family: 'Rubik Regular', sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  color: $primary;
+  margin-bottom: 25px;
+  @include breakpoint('tablet') {
+    margin-bottom: 50px;
+  }
 }
 
-@media (max-width: 768px) {
+.slick-dots {
+  bottom: -82px !important;
 }
 
-@media (max-width: 576px) {
+.slick-dots li button:before {
+  font-size: 20px !important;
+  color: #DDE0E4 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $border !important;
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  z-index: 1000 !important;
+  border: 2px solid $border !important;
+  &:hover,
+  &:focus {
+    background-color: $border !important;
+  }
+}
+
+.slick-prev {
+  top: 125% !important;
+  left: initial !important;
+  right: 50px !important;
+  &:before {
+    content: '\1F860' !important;
+    color: $border !important;
+    z-index: 1000 !important;
+  }
+}
+
+.slick-next,
+.slick-prev {
+  &:active,
+  &:hover,
+  &:focus {
+    &:before {
+      color: #fff !important;
+    }
+  }
+}
+
+.slick-next {
+  top: 125% !important;
+  right: 0 !important;
+  &:before {
+    content: '\1F862' !important;
+    color: $border !important;
+    z-index: 1000 !important;
+    &:hover,
+    &:focus {
+      color: #fff !important;
+    }
+  }
 }

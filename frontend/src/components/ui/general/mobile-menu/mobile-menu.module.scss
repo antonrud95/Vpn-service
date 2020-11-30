@@ -1,4 +1,6 @@
 @import 'src/styles/variables';
+@import 'src/styles/mixins';
+
 .root {
   position: fixed;
   top: 0;
@@ -6,11 +8,14 @@
   right: 0;
   bottom: 0;
   display: none;
-  padding: 1.5rem 0 3rem;
+  padding: 20px 0;
   background-color: white;
   overflow: scroll;
   &__shown {
     display: block;
+  }
+  @include breakpoint('mobile') {
+    padding: 45px 0;
   }
 }
 .link-block {
@@ -20,17 +25,23 @@
 }
 
 .link {
-  font-family: 'Arial', sans-serif;
-  color: $primary;
-  font-size: 24px;
   margin: 0 1.5rem;
   padding-bottom: $p-xxl;
-  border-bottom: 2px solid transparent;
   transition: all 0.3s ease-in-out;
-  &:hover {
-    color: $primary;
-  }
 }
+
+.hero-btn {
+  border-color: $border !important;
+  color: $border !important;
+  border-radius: 50px !important;
+}
+
+.nav-link-medium {
+  padding-bottom: $p-xxl;
+  font-family: 'Rubik Medium', sans-serif;
+  color: $secondary;
+}
+
 .button-wrapper {
   position: absolute;
   left: 0;

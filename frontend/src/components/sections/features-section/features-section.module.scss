@@ -1,0 +1,52 @@
+@import '~/styles/variables.scss';
+@import '~/styles/mixins.scss';
+
+.content-wrapper {
+    padding-top: 40px;
+    @include breakpoint('tablet') {
+        padding: 50px 0 0 50px;
+    }
+}
+
+.features-container {
+    margin-top: 96px;
+    padding-bottom: 50px;
+    @include breakpoint('tablet') {
+        padding-bottom: 113px;
+    }
+}
+
+.image-styles {
+    max-width: 508px;
+    margin: 0 auto;
+    @include breakpoint('tablet') {
+        margin: 0;
+    }
+}
+
+.features-main-title {
+    @include breakpoint('tablet') {
+        width: 85%;
+    }
+    @include breakpoint('desktop') {
+        width: 75%;
+    }
+}
+
+.description-styles {
+    margin-bottom: 20px;
+    @include breakpoint('tablet') {
+        width: 85%;
+    }
+    @include breakpoint('desktop') {
+        width: 80%;
+    }
+}
+
+.description-secondary {
+    margin-bottom: 15px;
+}
+
+.check-styles {
+    margin-right: 10px;
+}

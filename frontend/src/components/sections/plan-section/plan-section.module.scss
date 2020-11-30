@@ -1,0 +1,51 @@
+@import '~/styles/variables.scss';
+@import '~/styles/mixins.scss';
+
+.fluid-container {
+    background: linear-gradient(180deg, #F8F8F8 -45.04%, rgba(248, 248, 248, 0) 88.56%);
+    padding-top: 80px !important;
+}
+
+.main-plan-title {
+    text-align: center;
+}
+.main-plan-text {
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.item-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.price-styles {
+    margin-top: 50px;
+    font-family: 'Rubik Regular';
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: $primary;
+    margin-bottom: 20px;
+    @include breakpoint('mobile') {
+        margin-top: 115px;
+    }
+}
+.price-medium-styles {
+    margin-top: 115px;
+    font-family: 'Rubik Medium';
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: $secondary;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,30 @@
+@import '~/styles/variables.scss';
+@import '~/styles/mixins.scss';
+
+.network-container {
+    padding-top: 75px;
+    @include breakpoint('mobile') {
+        padding-top: 150px;
+    }
+}
+
+.network-title {
+    text-align: center;
+}
+.network-text {
+    text-align: center;
+    margin-bottom: 75px;
+    @include breakpoint('mobile') {
+        margin-bottom: 150px;
+    }
+}
+
+.map-image {
+    max-width: 1060px;
+    margin: 0 auto 35px auto;
+}
+
+.sponsors-image {
+    max-width: 1136px;
+    margin: 0 auto;
+}
