@@ -2,7 +2,7 @@
 @import 'src/styles/mixins';
 
 .navbar {
-  background-color: transparent;
+  background-color: #fff !important;
   padding: 20px 0;
   transition: all 0.1s ease-in-out;
   @include breakpoint('mobile') {
@@ -19,6 +19,9 @@
 .nav-link {
   margin: 0 20px;
   transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 .open-icon {
   display: block;
@@ -37,4 +40,8 @@
   font-family: 'Rubik Medium', sans-serif;
   color: $secondary;
   margin-right: 30px;
+  transition: .3s linear;
+  &:hover {
+    transform: scale(1.1);
+  }
 }

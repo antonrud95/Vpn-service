@@ -7,7 +7,6 @@
     padding: 30px;
     min-height: 330px;
     position: relative;
-    background-color: #fff;
     @include breakpoint('mobile') {
         min-height: 260px;
     }
@@ -17,6 +16,11 @@
     @include breakpoint('desktop') {
         margin-right: 5%;
     }
+}
+
+
+.reviews-wrapper-red {
+    border: 2px solid $border;
     &:after {
         content: '';
         position: absolute !important;
@@ -29,7 +33,7 @@
         opacity: 0.06;
         filter: blur(114px) !important;
         border-radius: 10px;
-        z-index: 1000 !important;
+        z-index: 50 !important;
     }
 }
 

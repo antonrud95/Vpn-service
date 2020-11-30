@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Img from 'gatsby-image'
 import styles from './reviews-component.module.scss'
 
 const ReviewsComponent = ({ image, title, city, rate, stars, review }) => {
+  const [focused, setFocused] = useState(false)
+
+  const onfocusToggler = () => {
+    setFocused(!focused)
+  }
+
   return (
-    <div className={styles.reviewsWrapper}>
+    <div
+      className={
+        !focused
+          ? styles.reviewsWrapper
+          : [styles.reviewsWrapper, styles.reviewsWrapperRed].join(' ')
+      }
+      onMouseEnter={onfocusToggler}
+      onMouseLeave={onfocusToggler}
+    >
       <div className={styles.reviewsHeader}>
         <div className={styles.reviewsUser}>
           <Img fluid={image} className={styles.iconImage} />
